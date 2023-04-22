@@ -1,0 +1,39 @@
+version: '3'
+
+services:
+  main:
+    image: clownchain
+    container_name: main
+    build: .
+    #network_mode: host
+    # networks:
+    #   - clown
+    ports:
+      - "10000:10000"   
+    command: python app.py --port 10000 --main True --name main --friends friend_1:10001 friend_2:10002
+
+  friend_1:
+    image: clownchain
+    container_name: friend_1
+    build: .
+    # networks:
+    #   - clown
+    ports:
+      - "10001:10001"   
+    #network_mode: "host"
+    command: python app.py --port 10001 --server main:10000 --name friend_1 --friends main:10000 friend_2:10002
+
+  friend_2:
+    image: clownchain
+    container_name: friend_2
+    build: .
+    # networks:
+    #   - clown
+    ports:
+      - "10002:10002"   
+    #network_mode: "host"
+    command: python app.py --port 10002 --server main:10000 --name friend_2 --friends main:10000 friend_1:10001
+# networks:
+#   clown:
+#     external: false
+#     name: clown
