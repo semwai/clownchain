@@ -19,11 +19,11 @@ def test_alone():
 
 def test_many():
     server = subprocess.Popen(['python', 'app.py', '--port', '10000',
-                              '--main', 'True', '--deep', '4', '--friends', 'localhost:10001'])
+                              '--main', 'True', '--deep', '5', '--friends', 'localhost:10001'])
     client = subprocess.Popen(
-        ['python', 'app.py', '--port', '10001', '--deep', '4', '--friends', 'localhost:10000'])
+        ['python', 'app.py', '--port', '10001', '--deep', '5', '--friends', 'localhost:10000'])
     res = 0, 1
-    time.sleep(10)
+    time.sleep(15)
     try:
         res = requests.get('http://localhost:10000/clownchain').json(
         ), requests.get('http://localhost:10001/clownchain').json()
