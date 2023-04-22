@@ -1,5 +1,8 @@
 # Cl🤡wnch🤡in
 
+## main ![https://github.com/semwai/clownchain/actions/workflows/pytest.yml/badge.svg?branch=main](https://github.com/semwai/clownchain/actions/workflows/pytest.yml/badge.svg?branch=main)
+
+## develop ![https://github.com/semwai/clownchain/actions/workflows/pytest.yml/badge.svg?branch=develop](https://github.com/semwai/clownchain/actions/workflows/pytest.yml/badge.svg?branch=develop)
 ## 🤡-🤡-🤡-🤡-🤡-🤡-🤡-🤡-🤡-🤡-🤡-🤡
 
 
