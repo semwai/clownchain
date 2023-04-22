@@ -11,7 +11,7 @@ jobs:
   tests:
     strategy:
       matrix:
-        test-os: [ ubuntu-latest, ubuntu-20.04, macos-latest ]
+        test-os: [ ubuntu-latest, macos-latest ]
     runs-on: ${{ matrix.test-os }}
     steps:
       - uses: actions/checkout@v1
